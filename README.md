@@ -1,245 +1,328 @@
-# 🏥 MedAI – AI Powered Medical Document Analyzer
+<p align="center">
+  <img src="screenshots/banner.png" width="100%"/>
+</p>
 
-![Python](https://img.shields.io/badge/Python-3.14-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)
-![OCR](https://img.shields.io/badge/Tesseract-OCR-orange)
-![Gemini AI](https://img.shields.io/badge/Google-Gemini_AI-red)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+# 🏥 MedAI – AI-Powered Medical Document Intelligence Platform
+
+<p align="center">
+  <img src="screenshots/home.png" width="900"/>
+</p>
+
+<p align="center">
+  <strong>Upload medical prescriptions and laboratory reports, extract clinical data using OCR, analyze findings with AI, and generate structured medical insights through a modern analytics dashboard.</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.14-blue"/>
+  <img src="https://img.shields.io/badge/FastAPI-Backend-green"/>
+  <img src="https://img.shields.io/badge/Streamlit-Frontend-red"/>
+  <img src="https://img.shields.io/badge/Tesseract-OCR-orange"/>
+  <img src="https://img.shields.io/badge/PyMuPDF-PDF_Parsing-lightgrey"/>
+  <img src="https://img.shields.io/badge/REST_API-v1-blueviolet"/>
+  <img src="https://img.shields.io/badge/License-MIT-yellow"/>
+</p>
+
+---
 
 ## 📖 Overview
 
-MedAI is an AI-powered healthcare application that extracts text from medical prescriptions and laboratory reports using OCR and analyzes the extracted information using Artificial Intelligence.
+MedAI is a full-stack AI-powered healthcare application that processes medical prescriptions and laboratory reports from **PDFs, scanned documents, and images**.
 
-The application helps users understand:
+The platform automatically extracts text, identifies medicines and laboratory parameters, calculates a health score, generates patient summaries, and stores reports for historical analysis.
 
-- 💊 Medicines prescribed
-- 📋 Lab test results
-- ❤️ Health Score
-- ⚠️ Medical warnings
-- 📑 Prescription summary
+The application combines **OCR, PDF parsing, rule-based clinical analysis, and AI-assisted interpretation** to provide structured medical insights through a modern web interface.
 
 ---
 
-# 🚀 Features
+## ✨ Key Features
 
-✅ Upload Prescription Images
+### 📄 Medical Document Analysis
+- Prescription analysis
+- Laboratory report analysis
+- Automatic document type detection
+- OCR-powered text extraction
+- Digital PDF text extraction (PyMuPDF)
+- OCR fallback for scanned PDFs and images
 
-✅ Upload PDF Medical Reports
+### 🧪 Clinical Intelligence
+- Medicine detection
+- Laboratory parameter extraction
+- Reference range comparison
+- Health score calculation
+- Clinical summary generation
+- Patient-friendly report summaries
+- Doctor advisory generation
+- Red flag detection
 
-✅ OCR using Tesseract
+### 📊 Analytics & History
+- Report history
+- Searchable patient records
+- Document filtering
+- Health score analytics
+- Document distribution dashboard
+- Patient analytics
 
-✅ Automatic Document Type Detection
-
-✅ Medicine Detection
-
-✅ Laboratory Report Analysis
-
-✅ AI-powered Medical Summary
-
-✅ Health Score Calculation
-
-✅ PostgreSQL Database Storage
-
-✅ REST API using FastAPI
-
----
-
-# 🏗️ Project Architecture
-
-```
-                User
-                  │
-                  ▼
-          Upload Image/PDF
-                  │
-                  ▼
-             FastAPI Backend
-                  │
-      ┌───────────┼────────────┐
-      │           │            │
-      ▼           ▼            ▼
-    OCR      AI Analysis    Database
-(Tesseract)  (Gemini AI)  (PostgreSQL)
-      │           │
-      └──────┬────┘
-             ▼
-      JSON API Response
-```
+### 🖥️ Modern User Interface
+- Streamlit dashboard
+- Professional medical report layout
+- Interactive visualizations
+- Responsive design
+- Swagger API documentation
 
 ---
 
-# 📂 Project Structure
+## 🏗️ System Architecture
 
-```
+```text
+                     User
+                       │
+                       ▼
+               Upload PDF / Image
+                       │
+                       ▼
+                Streamlit Frontend
+                       │
+                       ▼
+                 FastAPI Backend
+                       │
+        ┌──────────────┼──────────────┐
+        │              │              │
+        ▼              ▼              ▼
+   PDF Parser      OCR Engine     AI Analysis
+   (PyMuPDF)     (Tesseract)   (Clinical Logic)
+        │              │              │
+        └──────────────┼──────────────┘
+                       ▼
+               Structured Medical Data
+                       │
+                       ▼
+                 Report Database
+                       │
+                       ▼
+           Dashboard & Report History
+
+## 📂 Project Structure
+
+```text
 MedAI/
 │
-├── app/
-│   ├── main.py
-│   ├── database.py
-│   ├── schemas.py
-│   │
+├── backend/
+│   ├── data/
 │   ├── models/
-│   │     ├── report.py
-│   │     ├── medicine_db.py
-│   │     └── lab_db.py
-│   │
+│   ├── routes/
 │   ├── services/
-│   │     ├── ai_service.py
-│   │     ├── medicine_service.py
-│   │     ├── lab_service.py
-│   │     ├── pdf_service.py
-│   │     ├── health_score_service.py
-│   │     └── document_service.py
-│   │
-│   └── routes/
-│         ├── prescription.py
-│         ├── report.py
-│         └── user.py
+│   ├── database.py
+│   └── main.py
 │
+├── frontend/
+│   ├── components/
+│   ├── pages/
+│   ├── utils/
+│   └── Home.py
+│
+├── docs/
+├── sample_reports/
+├── screenshots/
 ├── requirements.txt
 ├── README.md
-└── .env
+└── .gitignore
 ```
 
----
+## 🚀 Getting Started
 
-# ⚙️ Technology Stack
-
-| Technology | Purpose |
-|------------|---------|
-| Python | Programming Language |
-| FastAPI | Backend API |
-| PostgreSQL | Database |
-| SQLAlchemy | ORM |
-| Tesseract OCR | Text Extraction |
-| Google Gemini AI | AI Analysis |
-| Pillow | Image Processing |
-| Uvicorn | API Server |
-
----
-
-# 📡 API Endpoints
-
-## Upload Prescription
-
-```
-POST /upload-prescription
-```
-
-Uploads a prescription image or PDF and returns OCR text, medicine analysis, lab findings, and health score.
-
----
-
-## Get Reports
-
-```
-GET /reports
-```
-
-Returns all stored reports.
-
----
-
-## Get History
-
-```
-GET /history
-```
-
-Returns uploaded report history.
-
----
-
-## Health Check
-
-```
-GET /health
-```
-
-Returns API status.
-
----
-
-# 📊 Sample Response
-
-```json
-{
-  "document_type": "Prescription",
-  "health_score": 90,
-  "analysis": {
-    "summary": "Prescription contains medicines.",
-    "medicines": [
-      {
-        "name": "Paracetamol",
-        "purpose": "Pain relief"
-      }
-    ]
-  }
-}
-```
-
----
-
-# 🛠 Installation
-
-Clone the repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/mohansingh77-creator/MedAI.git
-```
-
-Navigate to the project
-
-```bash
 cd MedAI
 ```
 
-Install dependencies
+### Create a virtual environment
+
+**Windows**
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+**macOS / Linux**
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the server
+### Run the backend
 
 ```bash
-uvicorn app.main:app --reload
+cd backend
+uvicorn main:app --reload --port 8001
 ```
 
-Open Swagger UI
+### Run the frontend
+
+Open a new terminal:
+
+```bash
+cd frontend
+streamlit run Home.py
+```
+
+### Open the application
+
+**Frontend**
 
 ```
-http://127.0.0.1:8000/docs
+http://localhost:8501
 ```
 
----
+**Swagger API**
 
-# 🔮 Future Enhancements
+```
+http://127.0.0.1:8001/docs
+```
+## 📡 REST API
 
-- User Authentication (JWT)
-- Flutter Mobile App
-- Medicine Interaction Checker
-- Drug Side Effect Prediction
-- AI Chat Assistant
-- Doctor Recommendation System
+### Analyze Medical Document
+
+```http
+POST /api/v1/documents/analyze
+```
+
+Upload a prescription image, scanned PDF, or laboratory report and receive structured medical analysis.
+
+### Get Report History
+
+```http
+GET /api/v1/reports
+```
+
+Returns all previously analyzed reports.
+
+### Health Check
+
+```http
+GET /health
+```
+
+Returns backend service status.
+
+## 🧠 Clinical Processing Pipeline
+
+The MedAI analysis engine follows a structured medical document processing workflow.
+
+```text
+Upload Document
+      │
+      ▼
+Detect PDF / Image
+      │
+      ▼
+Extract Text (PyMuPDF)
+      │
+      ▼
+OCR Fallback (Tesseract)
+      │
+      ▼
+Document Type Detection
+      │
+      ▼
+Patient Information Extraction
+      │
+      ▼
+Medicine Detection
+      │
+      ▼
+Laboratory Parameter Parsing
+      │
+      ▼
+Health Score Calculation
+      │
+      ▼
+Clinical Summary Generation
+      │
+      ▼
+Database Storage
+      │
+      ▼
+Dashboard & Report History
+```
+
+This pipeline enables MedAI to process **digital PDFs, scanned PDFs, and image-based medical documents** with OCR fallback for improved reliability.
+
+## 📚 Documentation
+
+Additional technical documentation is available in the `docs/` folder.
+
+- Database architecture
+- API request/response examples
+- Swagger interface
+- Upload workflow
+
+## 🔮 Future Roadmap
+
+### Phase 2 – Clinical Intelligence
+
+- Medicine interaction checker
+- Drug dosage validation
+- Side effect prediction
+- Abnormal lab trend detection
+- Multi-test report correlation
+
+### Phase 3 – AI Assistant
+
+- Conversational medical report explanation
+- Patient question answering
+- Doctor summary generation
+- Follow-up recommendation engine
+
+### Phase 4 – Platform Expansion
+
 - Multi-language OCR
-- Cloud Deployment
-- Docker Support
+- User authentication
+- Cloud deployment (AWS / Azure)
+- Docker & CI/CD
+- Mobile application
+- Electronic Health Record (EHR) integration
 
----
-
-# 👨‍💻 Developer
+## 👨‍💻 Developer
 
 **Mohan Singh**
 
-Finance | FP&A | Business Strategy | AI Developer
+Finance | FP&A | Business Strategy | AI & Data Applications
 
-GitHub:
-https://github.com/mohansingh77-creator
+- GitHub: https://github.com/mohansingh77-creator
+- LinkedIn: www.linkedin.com/in/mohan-singh-54730237
 
----
+## 📄 License
 
-# ⭐ If you like this project
+This project is licensed under the **MIT License**.
 
-Please consider giving the repository a ⭐ on GitHub.
+You are free to use, modify, and distribute this software for educational and non-commercial purposes.
+
+## 🤝 Contributing
+
+Contributions, feature suggestions, and bug reports are welcome.
+
+If you would like to contribute:
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Open a pull request
+
+Please ensure that new features include appropriate documentation and maintain the existing project structure.
+
+## ⭐ Support the Project
+
+If you found MedAI useful, please consider giving the repository a **⭐ on GitHub**.
+
+Your support helps improve the project and encourages future development of AI-powered healthcare tools.
+

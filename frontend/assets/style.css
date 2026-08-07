@@ -1,0 +1,300 @@
+/* ===========================
+   MEDAI GLOBAL THEME
+=========================== */
+
+html, body, [class*="css"] {
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Hide Streamlit menu/footer */
+
+#MainMenu {visibility:hidden;}
+footer {visibility:hidden;}
+header {visibility:hidden;}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.medai-header{
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    background:linear-gradient(90deg,#1565C0,#42A5F5);
+
+    padding:28px;
+
+    border-radius:18px;
+
+    color:white;
+
+    margin-bottom:25px;
+
+    box-shadow:0 8px 24px rgba(0,0,0,.18);
+}
+
+.medai-header .medai-logo{
+    font-size: 48px;
+    margin-right: 20px;
+}
+
+.medai-header .medai-title{
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.medai-header .medai-subtitle{
+    font-size: 18px;
+    opacity: .9;
+    margin-top: 6px;
+}
+
+/* ==========================================================
+   HEALTH SCORE CARD
+========================================================== */
+
+.health-card{
+
+    background:#FFFFFF;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    margin-top:20px;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+
+}
+
+.health-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.health-title{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#1F2937;
+
+}
+
+.health-badge{
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+.health-score{
+
+    font-size:72px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    line-height:1;
+
+    margin-bottom:10px;
+
+}
+
+.score-small{
+
+    font-size:26px;
+
+    color:#6B7280;
+
+}
+
+.health-message{
+
+    font-size:17px;
+
+    color:#4B5563;
+
+    margin-top:12px;
+
+    margin-bottom:18px;
+
+}
+
+.schedule-card{
+    background:white;
+    border:1px solid #E6E8EC;
+    border-radius:14px;
+    padding:0;
+    margin-bottom:18px;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+.schedule-header{
+    background:#F5F8FF;
+    padding:12px 18px;
+    font-size:20px;
+    font-weight:700;
+    color:#243B64;
+    border-bottom:1px solid #EAEAEA;
+}
+
+.schedule-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 18px;
+    border-bottom:1px solid #F1F3F5;
+}
+
+.schedule-row:last-child{
+    border-bottom:none;
+}
+
+.med-name{
+    font-size:16px;
+    font-weight:600;
+    color:#1F2937;
+}
+
+.med-dose{
+    font-size:13px;
+    color:#7B8794;
+    margin-top:3px;
+}
+
+.sos-badge{
+    background:#E8F1FF;
+    color:#155EEF;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.normal-badge{
+    background:#EEF7EE;
+    color:#2E7D32;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+}
+
+div[data-testid="stVerticalBlockBorderWrapper"]{
+    border-radius:16px;
+}
+
+div[data-testid="stAlert"]{
+    border-radius:10px;
+}
+
+h4{
+    font-size:20px !important;
+}
+
+.stButton > button {
+    width:100%;
+    border-radius:10px;
+    font-weight:600;
+}
+
+.stProgress > div > div > div > div{
+    background:#2F80ED;
+}
+
+/* ==========================================================
+   PRIMARY BUTTON
+========================================================== */
+
+.stButton > button[kind="primary"]{
+
+    background:#2563EB !important;
+
+    border:1px solid #2563EB !important;
+
+    color:white !important;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    height:52px;
+
+    transition:0.25s;
+}
+
+.stButton > button[kind="primary"]:hover{
+
+    background:#1D4ED8 !important;
+
+    border-color:#1D4ED8 !important;
+
+    color:white !important;
+}
+
+/* ==========================
+   DOWNLOAD BUTTON
+========================== */
+
+.stDownloadButton > button{
+
+    background:#2563EB !important;
+
+    color:white !important;
+
+    border:1px solid #2563EB !important;
+
+    border-radius:10px !important;
+
+    font-weight:600 !important;
+
+    height:52px !important;
+
+    transition:0.25s;
+}
+
+.stDownloadButton > button:hover{
+
+    background:#1D4ED8 !important;
+
+    border-color:#1D4ED8 !important;
+
+    color:white !important;
+}
+
+/* ==========================
+   Clinical Report Summary
+========================== */
+
+div[data-testid="stMetric"] label {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #475569 !important;
+}
+
+div[data-testid="stMetricValue"] {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #1E293B !important;
+}

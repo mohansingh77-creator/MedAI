@@ -1,0 +1,38 @@
+[
+    {
+        "name": "GB29 TOTAL",
+        "purpose": "Relieves nerve pain",
+        "timing": "After Dinner",
+        "side_effects": [
+            "Sleepiness",
+            "Dizziness",
+            "Dry mouth"
+        ]
+    },
+    {
+        "name": "PREDMET",
+        "purpose": "Reduces inflammation",
+        "timing": "After Food",
+        "side_effects": [
+            "Acidity",
+            "Weight gain",
+            "High blood sugar"
+        ]
+    },
+    {
+        "name": "CITABO K27",
+        "purpose": "Strengthens bones and nerves",
+        "timing": "After Dinner",
+        "side_effects": [
+            "Constipation"
+        ]
+    },
+    {
+        "name": "ALTRADAY",
+        "purpose": "Pain relief",
+        "timing": "When required",
+        "side_effects": [
+            "Acidity"
+        ]
+    }
+]
